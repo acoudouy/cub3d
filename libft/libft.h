@@ -6,7 +6,7 @@
 /*   By: acoudouy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:19:29 by acoudouy          #+#    #+#             */
-/*   Updated: 2019/11/20 13:46:18 by acoudouy         ###   ########.fr       */
+/*   Updated: 2019/11/29 09:51:11 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,18 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_unsigned_fd(unsigned int n, int fd);
+int				get_next_line(int fd, char **line);
+char			*ft_nulltab(char *tab);
 
 typedef struct	s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+/*
+** Fonctions de list 
+*/
 
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);

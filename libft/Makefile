@@ -6,7 +6,7 @@
 #    By: acoudouy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 09:15:24 by acoudouy          #+#    #+#              #
-#    Updated: 2019/11/21 19:16:41 by acoudouy         ###   ########.fr        #
+#    Updated: 2019/11/29 10:29:18 by acoudouy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ FILES		= ft_memset.c \
 				ft_putnbr_unsigned_fd.c \
 				ft_calloc.c \
 				ft_strdup.c \
+				get_next_line.c \
+				get_next_line_utils.c \
 
 FILES2		=	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \

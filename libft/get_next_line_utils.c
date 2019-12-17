@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cub3d.h                                         :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoudouy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 13:21:16 by acoudouy          #+#    #+#             */
-/*   Updated: 2019/11/28 10:10:08 by acoudouy         ###   ########.fr       */
+/*   Created: 2019/11/07 16:26:40 by acoudouy          #+#    #+#             */
+/*   Updated: 2019/11/29 09:48:29 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#ifndef FT_CUB3D_H
-# define FT_CUB3D_H
-
-
-
-typedef struct	s_map
+char				*ft_nulltab(char *tab)
 {
-	int			width;
-	int			height;
-	char		**val;
-}				t_map
-
-
-
+	tab = malloc(1);
+	tab[0] = 0;
+	return (tab);
+}
