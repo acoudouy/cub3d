@@ -65,7 +65,6 @@ t_image			texture_wall(t_data *data, t_wall *wall, t_image *image)
 
 	i = (int)res_width;
 	size = &i;
-	write(1,"P",1);
 	if (wall->card == 'N')
 		img_xpm.ptr = mlx_xpm_file_to_image(data->mlx_ptr, "../texture/north.XPM", size, size);
 	else if (wall->card == 'S')

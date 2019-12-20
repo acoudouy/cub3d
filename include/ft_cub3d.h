@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# include <mlx.h>
+# include "mlx.h"
 # include <unistd.h>
 # include <math.h>
 # include "../libft/libft.h"
@@ -78,8 +78,8 @@ typedef struct 		s_player
 **	Fonctions et structure d'environnement
 */
 
-# define res_width 1920.0f
-# define res_height 1080.0f
+# define res_width 640.0f
+# define res_height 480.0f
 # define sz_wall 64
 # define cv_rad M_PI / 180
 # define dist_plan ((res_width / 2.0f) / tan((cv_rad * view) / 2))
