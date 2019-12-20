@@ -17,6 +17,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <windows.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
@@ -63,6 +64,8 @@ t_map			read_map();
 # define angle_start 0
 # define rotation 15
 # define view 60.0f
+
+int					check_res(int width, int height);
 
 typedef struct 		s_player
 {

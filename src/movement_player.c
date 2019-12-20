@@ -73,6 +73,8 @@ static void		movement_player(int key, t_player *player, t_data *data)
 
 	X_mov = cos(player->front * cv_rad) * player->speed;
 	Y_mov = -sin(player->front * cv_rad) * player->speed;
+	if (key == K_ESC)
+		exit(1);
 	if (key == K_UP && wall_limit(key, data, X_mov, Y_mov) == 0)
 	{
 		player->X += X_mov;

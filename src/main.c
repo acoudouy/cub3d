@@ -12,6 +12,13 @@
 
 #include "../include/ft_cub3d.h"
 
+static int		deal_close(t_data *data)
+{
+	(void)data->mlx_ptr;
+	exit(1);
+	return (0);
+}
+
 static void		init_player(t_player *player)
 {
 		player->X = pos_X_start;
@@ -47,6 +54,7 @@ int main(void)
 	ray_length_to_wall(&data);
 	draw_wall(&data);
 	mlx_hook(data.mlx_win, 2, 1L << 0, deal_key, &data);
+	mlx_hook(data.mlx_win, 17, 1L << 0, deal_close, &data);
 	mlx_loop(data.mlx_ptr);
 	return (EXIT_SUCCESS);
 }
