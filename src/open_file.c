@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 11:39:21 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 14:53:31 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/15 13:23:05 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ int				open_file(t_data *data, char *path_file)
 	check = 0;
 	if ((fd = open(path_file, O_RDONLY)) < 0)
 		return (m_error("Fichier .cub non ouvrable ou inexistant", data, 0));
-	while ((i = get_next_line(fd, &temp)) == 1)
-	{
+	while ((i = get_next_line(fd, &temp)) == 1 && ++check > -1)
 		ft_lstadd_back(&list, ft_lstnew(temp));
-		check++;
-	}
 	close(fd);
 	if (check == 0)
 	{
