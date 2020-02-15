@@ -6,7 +6,7 @@
 /*   By: acoudouy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:26:01 by acoudouy          #+#    #+#             */
-/*   Updated: 2019/11/29 10:30:59 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/14 10:57:40 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-# ifndef BUFFER_SIZE
+#ifndef BUFFER_SIZE
 # define BUFFER_SIZE 32
-# endif
+#endif
 
 static int	ft_checkerror(int fd, char **cbuf, int *size_line)
 {

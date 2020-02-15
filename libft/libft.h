@@ -6,7 +6,7 @@
 /*   By: acoudouy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:19:29 by acoudouy          #+#    #+#             */
-/*   Updated: 2019/11/29 09:51:11 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/14 10:56:56 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ typedef struct	s_list
 }				t_list;
 
 /*
-** Fonctions de list 
+** Fonctions de list
 */
 
 t_list			*ft_lstnew(void *content);

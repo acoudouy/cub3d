@@ -1,0 +1,22 @@
+
+
+NO ./texture/north2.XPM
+
+F 98,61,53
+WE ./texture/west2.XPM
+
+EA ./texture/east2.XPM
+R 500 300
+
+
+
+SO ./texture/south2.XPM
+S ./texture/barrel.XPM
+C 119,136,153
+
+
+1111
+1001
+1021
+1N01
+1111

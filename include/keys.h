@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 15:12:46 by acoudouy          #+#    #+#             */
-/*   Updated: 2019/11/30 15:12:58 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/01/10 08:31:37 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@
 #  define K_RIGHT		124
 #  define K_DIGIT_1		18
 #  define K_L			37
+#  define K_A			0
+#  define K_D			2
+#  define K_W			13
+#  define K_S			1
 # endif
 #endif
