@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 13:39:24 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 10:52:31 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/17 16:37:19 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static t_image			texture_sprite(t_data *data)
 	return (img_spr);
 }
 
-static void				draw_sprite2(t_data *data, t_image image,
+static void				draw_sprite2(t_data *data, t_wall wall,
 			t_image img_spr, int colonne)
 {
 	int			y;
@@ -81,9 +81,10 @@ static void				draw_sprite2(t_data *data, t_image image,
 		texy = (int)texpos & 63;
 		texpos += (64 / img_spr.s_height);
 		up = 37 * data->res_h / data->lst_spr->sprite->dist_cent;
-		if (img_spr.data[(int)(texx + 64 * texy)] != 0)
+		if (img_spr.data[(int)(texx + 64 * texy)] != 0 && wall.pnt.dist >
+			data->lst_spr->sprite->dist_cent - 55.0)
 		{
-			image.data[(int)(colonne + (int)data->res_w * (y +
+			data->image.data[(int)(colonne + (int)data->res_w * (y +
 						data->res_h / 2 - up))] =
 						img_spr.data[(int)(texx + 64 * texy)];
 		}
@@ -92,7 +93,8 @@ static void				draw_sprite2(t_data *data, t_image image,
 	mlx_destroy_image(data->mlx_ptr, img_spr.ptr);
 }
 
-void					draw_sprite(t_data *data, t_image image, int colonne)
+void					draw_sprite(t_data *data, t_wall wall,
+			t_image image, int colonne)
 {
 	t_image		img_spr;
 	t_lstspr	*temp;
@@ -105,14 +107,14 @@ void					draw_sprite(t_data *data, t_image image, int colonne)
 		img_spr = texture_sprite(data);
 		if (img_spr.ptr == NULL)
 			m_error("Erreur sur malloc img_spr", data, 7);
-		draw_sprite2(data, image, img_spr, colonne);
+		draw_sprite2(data, wall, img_spr, colonne);
 		while (data->lst_spr != NULL && data->lst_spr->next != NULL)
 		{
 			temp = data->lst_spr;
 			data->lst_spr = data->lst_spr->next;
 			free(temp->sprite);
 			free(temp);
-			draw_sprite(data, image, colonne);
+			draw_sprite(data, wall, image, colonne);
 		}
 	}
 }

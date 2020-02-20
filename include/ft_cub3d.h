@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 13:21:16 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 13:02:52 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/17 16:17:58 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,7 +186,8 @@ void				add_sprites(t_data *data, t_intersect pnt, int x, int y);
 t_map				read_map(t_data *data, t_list *list);
 int					check_content_map(t_map *m, t_data *data);
 void				check_key(t_data *data, char *str);
-void				draw_sprite(t_data *data, t_image image, int colonne);
+void				draw_sprite(t_data *data, t_wall wall, t_image image,
+					int colonne);
 int					draw_wall(t_data *data);
 int					wall_limit(int key, t_data *data, float x_mov, float y_mov);
 void				black_screen(t_data *data);

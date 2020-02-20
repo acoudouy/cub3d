@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 16:45:06 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 12:55:31 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/17 16:19:51 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void		destroy_data(t_data *data, int step)
 		if (data->lst_spr != NULL)
 			free(data->lst_spr);
 	}
-	system("leaks cub3D");
 	exit(0);
 }
 

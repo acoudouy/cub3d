@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 14:18:01 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 10:53:21 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/17 15:53:02 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static int		draw_wall2(t_data *data, t_wall wall, int colonne)
 		size_ceil++;
 	}
 	draw_wall3(data, wall, colonne, size_ceil);
-	draw_sprite(data, data->image, colonne);
+	draw_sprite(data, wall, data->image, colonne);
 	return (size_ceil);
 }
 

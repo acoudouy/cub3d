@@ -6,7 +6,7 @@
 /*   By: acoudouy <acoudouy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 09:48:48 by acoudouy          #+#    #+#             */
-/*   Updated: 2020/02/14 14:53:07 by acoudouy         ###   ########.fr       */
+/*   Updated: 2020/02/17 15:05:19 by acoudouy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,14 @@ int				main(int ac, char **av)
 {
 	t_data			data;
 
-	if (ac == 1 || (ac == 3 && ft_strncmp(av[2], "-save", 6) != 0) || ac >= 4)
+	if (ac == 1 || (ac == 3 && ft_strncmp(av[2], "--save", 6) != 0) || ac >= 4)
 		return (m_error("Erreur d'argument au lancement", &data, -1));
 	if ((data.mlx_ptr = mlx_init()) == NULL)
 		return (m_error("Erreur d'initialisation mlx", &data, 0));
 	init_data(&data, av[1]);
 	open_file(&data, av[1]);
 	res_data(&data);
-	if (ac == 3 && ft_strncmp(av[2], "-save", 6) == 0)
+	if (ac == 3 && ft_strncmp(av[2], "--save", 6) == 0)
 		screen_command(&data);
 	else if (ac == 2)
 	{

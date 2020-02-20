@@ -5,7 +5,7 @@ WE ./texture/west2.XPM
 EA ./texture/east2.XPM
 R 640 480
 
-C 119,136,153
+C 200,136,153
 
 SO ./texture/south2.XPM
 S ./texture/barrel.XPM
